@@ -18,31 +18,31 @@ const score = JSON.parse(localStorage.getItem('score')) || {
       let result = '';
 
       if (playerMove === 'You select rock') {
-        if (computerMove === 'Computer select rock') {
+        if (computerMove === '  Computer select rock') {
           result = 'Draw';
-        } else if (computerMove === 'Computer select paper') {
+        } else if (computerMove === '  Computer select paper') {
           result = 'You Lose.';
-        } else if (computerMove === 'Computer select scissors') {
+        } else if (computerMove === '  Computer select scissors') {
           result = 'You Win';
         }
 
 
       } else if (playerMove === 'You select paper') {
-        if (computerMove === 'Computer select rock') {
+        if (computerMove === '  Computer select rock') {
           result = 'You Win';
-        } else if (computerMove === 'Computer select paper') {
+        } else if (computerMove === '  Computer select paper') {
           result = 'Draw';
-        } else if (computerMove === 'Computer select scissors') {
+        } else if (computerMove === '  Computer select scissors') {
         result = 'You Lose';
         }
 
 
       } else if (playerMove === 'You select scissors') {
-        if (computerMove === 'Computer select rock') {
+        if (computerMove === '  Computer select rock') {
           result = 'You Lose';
-        } else if (computerMove === 'Computer select paper') {
+        } else if (computerMove === '  Computer select paper') {
           result = 'You Win';
-        } else if (computerMove === 'Computer select scissors') {
+        } else if (computerMove === '  Computer select scissors') {
         result = 'Draw';
         }
 
@@ -109,11 +109,11 @@ const score = JSON.parse(localStorage.getItem('score')) || {
       let computerMove = '';
 
       if (randomNumber >= 0 && randomNumber < 1 / 3) {
-        computerMove = 'Computer select rock';
+        computerMove = '  Computer select rock';
       } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-        computerMove = 'Computer select paper';
+        computerMove = '  Computer select paper';
       } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-        computerMove = 'Computer select scissors';
+        computerMove = '  Computer select scissors';
       }
 
 
