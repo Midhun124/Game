@@ -84,7 +84,7 @@ const score = JSON.parse(localStorage.getItem('score')) || {
 
       // The moves those selecting  his/him chance displaying function
       function updateMoves(playerMove , computerMove) {
-      document.querySelector('.js-moves').innerHTML = `${playerMove} - ${computerMove}`
+      document.querySelector('.js-moves').innerText = `${playerMove} - ${computerMove}`
       }
     
       // Computer score function
