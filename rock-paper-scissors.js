@@ -17,32 +17,32 @@ const score = JSON.parse(localStorage.getItem('score')) || {
 
       let result = '';
 
-      if (playerMove === 'rock') {
-        if (computerMove === 'rock') {
+      if (playerMove === 'You select rock') {
+        if (computerMove === 'Computer select rock') {
           result = 'Draw';
-        } else if (computerMove === 'paper') {
+        } else if (computerMove === 'Computer select paper') {
           result = 'You Lose.';
-        } else if (computerMove === 'scissors') {
+        } else if (computerMove === 'Computer select scissors') {
           result = 'You Win';
         }
 
 
-      } else if (playerMove === 'paper') {
-        if (computerMove === 'rock') {
+      } else if (playerMove === 'You select paper') {
+        if (computerMove === 'Computer select rock') {
           result = 'You Win';
-        } else if (computerMove === 'paper') {
+        } else if (computerMove === 'Computer select paper') {
           result = 'Draw';
-        } else if (computerMove === 'scissors') {
+        } else if (computerMove === 'Computer select scissors') {
         result = 'You Lose';
         }
 
 
-      } else if (playerMove === 'scissors') {
-        if (computerMove === 'rock') {
+      } else if (playerMove === 'You select scissors') {
+        if (computerMove === 'Computer select rock') {
           result = 'You Lose';
-        } else if (computerMove === 'paper') {
+        } else if (computerMove === 'Computer select paper') {
           result = 'You Win';
-        } else if (computerMove === 'scissors') {
+        } else if (computerMove === 'Computer select scissors') {
         result = 'Draw';
         }
 
@@ -84,7 +84,7 @@ const score = JSON.parse(localStorage.getItem('score')) || {
 
       // The moves those selecting  his/him chance displaying function
       function updateMoves(playerMove , computerMove) {
-      document.querySelector('.js-moves').innerHTML = `You Select ${playerMove} - Computer Select ${computerMove}`
+      document.querySelector('.js-moves').innerHTML = ` ${playerMove} - ${computerMove}`
       }
     
       // Computer score function
@@ -109,11 +109,11 @@ const score = JSON.parse(localStorage.getItem('score')) || {
       let computerMove = '';
 
       if (randomNumber >= 0 && randomNumber < 1 / 3) {
-        computerMove = 'rock';
+        computerMove = 'Computer select rock';
       } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-        computerMove = 'paper';
+        computerMove = 'Computer select paper';
       } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-        computerMove = 'scissors';
+        computerMove = 'Computer select scissors';
       }
 
 
