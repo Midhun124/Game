@@ -1,4 +1,4 @@
-// score variable
+// score Objects
 const score =  {
         wins : 0 ,
         losses : 0 ,
