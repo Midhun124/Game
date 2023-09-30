@@ -125,7 +125,7 @@ const score =  {
 let clickCount = 0;
 let buttons = document.getElementsByClassName('clickable');
     
-  for(let i = 0; i < buttons.length; i++) {
+  for(let i = 0; i <= buttons.length; i++) {
         buttons[i].addEventListener('click', function() {
             clickCount++;
             document.getElementById('clickCount').innerText = clickCount;
